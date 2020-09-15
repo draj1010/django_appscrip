@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<form  action="{% url 'que_two' %}" method="POST" class="form">
+    <input type="hidden" name="name" value="{{name}}" />
+    <span>Who is the best cricketer in the world?</span><br>
+    <input type="radio" name="que1" value="Sachin Tendulkar">
+    <label for="male">Sachin Tendulkar</label><br>
+    <input type="radio" name="que1" value="Virat Kolli">
+    <label for="female">Virat Kolli</label><br>
+    <input type="radio" name="que1" value="Adam Gilchirst">
+    <label for="other">Adam Gilchirst</label><br>
+    <input type="radio" name="que1" value="Jacques Kallis">
+    <label for="other">Jacques Kallis</label><br>
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary">NEXT</button>
+  </form>
+{% endblock %}

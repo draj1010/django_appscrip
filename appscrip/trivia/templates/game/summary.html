@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+        <h1> Summary </h1>
+
+Hello {{name}} ,<br>
+<br>
+Here are the answers selected:<br>
+<br>
+Who is the best cricketer in the world?<br>
+Answer: {{ans_que_one}}<br>
+<br>
+What are the colors in the national flag?<br>
+Answers: {{ans_que_two}}<br>
+
+<a href="{% url 'get_name' %}">FINISH</a>
+<a href="{% url 'history' %}">HISTORY</a>
+
+{% endblock %}

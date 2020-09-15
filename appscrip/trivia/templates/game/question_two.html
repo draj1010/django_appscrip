@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<form  action="{% url 'summary' %}" method="POST" class="form">
+    <input type="hidden" name="name" value="{{name}}" />
+    <input type="hidden" name="ans_que_one" value="{{ans_que_one}}" />
+    <span>What are the colors in the Indian national flag?</span><br>
+    <input type="checkbox" name="que2" value="White">
+    <label >White</label><br>
+    <input type="checkbox" name="que2" value="Yellow">
+    <label >Yellow</label><br>
+    <input type="checkbox" name="que2" value="Orange">
+    <label >Orange</label><br>
+    <input type="checkbox" name="que2" value="Green">
+    <label >Green</label><br>
+    {% csrf_token %}
+    <button type="submit" class="btn btn-primary">NEXT</button>
+  </form>
+{% endblock %}

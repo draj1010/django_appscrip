@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+        <h1> Trivia App </h1>
+        <script>
+            setTimeout(function(){
+                window.location.replace("{% url 'get_name' %}");
+            }, 1500);
+        </script>
+{% endblock %}

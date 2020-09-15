@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+{% for game in obj %}
+GAME {{ forloop.counter }} : {{game.date}} <br>
+<br>
+Name : {{game.name}}<br>
+<br>
+Who is the best cricketer in the world?<br>
+{{game.que_one}}<br>
+<br>
+What are the colors in the national flag?<br>
+<br>
+Answers : {{game.que_two}}<br>
+<br>
+___________________________________________________
+{% endfor %}
+
+{% endblock %}

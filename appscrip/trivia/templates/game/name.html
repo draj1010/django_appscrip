@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<form  action="{% url 'que_one' %}" method="POST" class="form">
+    <span>What is your name?</span>
+    <input type="text" name="name"/>
+    
+    {% csrf_token %}
+        <button type="submit" class="btn btn-primary">NEXT</button>
+  </form>
+{% endblock %}
